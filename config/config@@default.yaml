@@ -1,0 +1,12 @@
+# Configuration par défaut : meilleure configuration hors-ligne du banc d'évaluation.
+chunking: sentences            # sections | fixed | sentences
+chunking_params: {fenetre: 3, pas: 2}
+retriever: hybrid              # bm25 | char_tfidf | dense_spacy | dense_st | hybrid
+hybrid_composants: [bm25, char_tfidf]
+hybrid_poids: [1.0, 0.8]
+k_candidats: 20
+k_contexte: 4
+reranker: none                 # none | ltr | cross_encoder
+generateur: auto               # auto (Claude si ANTHROPIC_API_KEY, sinon extractif) | extractif | claude
+seuil_abstention: 0.44         # calibré par ragdoc.evaluate (voir reports/evaluation.md)
+exclure_injections: true

@@ -1,0 +1,841 @@
+{
+  "questions": 64,
+  "k": 5,
+  "resultats": [
+    {
+      "config": "sections/bm25",
+      "chunking": "sections",
+      "retriever": "bm25",
+      "nb_chunks": 99,
+      "build_s": 0.18,
+      "latence_ms": 0.3,
+      "recall@5": 0.964,
+      "hit@1": 0.911,
+      "mrr": 0.938,
+      "ndcg@5": 0.938,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.963
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.6,
+          "mrr": 0.6
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "sections/char_tfidf",
+      "chunking": "sections",
+      "retriever": "char_tfidf",
+      "nb_chunks": 99,
+      "build_s": 0.12,
+      "latence_ms": 1.2,
+      "recall@5": 0.973,
+      "hit@1": 0.875,
+      "mrr": 0.926,
+      "ndcg@5": 0.927,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.95
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.9,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.667
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 0.875
+        }
+      }
+    },
+    {
+      "config": "sections/dense_spacy",
+      "chunking": "sections",
+      "retriever": "dense_spacy",
+      "nb_chunks": 99,
+      "build_s": 3.78,
+      "latence_ms": 0.4,
+      "recall@5": 0.402,
+      "hit@1": 0.321,
+      "mrr": 0.362,
+      "ndcg@5": 0.361,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 0.425,
+          "mrr": 0.39
+        },
+        "injection": {
+          "n": 2,
+          "recall": 0.0,
+          "mrr": 0.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.3,
+          "mrr": 0.3
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.4,
+          "mrr": 0.24
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 0.5,
+          "mrr": 0.5
+        }
+      }
+    },
+    {
+      "config": "sections/hybrid",
+      "chunking": "sections",
+      "retriever": "hybrid",
+      "nb_chunks": 99,
+      "build_s": 0.12,
+      "latence_ms": 1.4,
+      "recall@5": 0.982,
+      "hit@1": 0.911,
+      "mrr": 0.943,
+      "ndcg@5": 0.946,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.963
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.667
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "sections/hybrid+dense",
+      "chunking": "sections",
+      "retriever": "hybrid+dense",
+      "nb_chunks": 99,
+      "build_s": 1.08,
+      "latence_ms": 1.8,
+      "recall@5": 0.857,
+      "hit@1": 0.518,
+      "mrr": 0.678,
+      "ndcg@5": 0.71,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 0.912,
+          "mrr": 0.699
+        },
+        "injection": {
+          "n": 2,
+          "recall": 0.5,
+          "mrr": 0.5
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.9,
+          "mrr": 0.7
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.7
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 0.5,
+          "mrr": 0.5
+        }
+      }
+    },
+    {
+      "config": "sections/hybrid+ltr",
+      "chunking": "sections",
+      "retriever": "hybrid+ltr",
+      "nb_chunks": 99,
+      "build_s": 1.26,
+      "latence_ms": 0.0,
+      "recall@5": 0.964,
+      "hit@1": 0.929,
+      "mrr": 0.946,
+      "ndcg@5": 0.946,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.975
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.6,
+          "mrr": 0.6
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "fixed/bm25",
+      "chunking": "fixed",
+      "retriever": "bm25",
+      "nb_chunks": 73,
+      "build_s": 0.09,
+      "latence_ms": 0.2,
+      "recall@5": 0.982,
+      "hit@1": 0.911,
+      "mrr": 0.941,
+      "ndcg@5": 0.942,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.963
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.64
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "fixed/char_tfidf",
+      "chunking": "fixed",
+      "retriever": "char_tfidf",
+      "nb_chunks": 73,
+      "build_s": 0.1,
+      "latence_ms": 1.1,
+      "recall@5": 0.982,
+      "hit@1": 0.911,
+      "mrr": 0.943,
+      "ndcg@5": 0.939,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.971
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.6
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "fixed/dense_spacy",
+      "chunking": "fixed",
+      "retriever": "dense_spacy",
+      "nb_chunks": 73,
+      "build_s": 1.45,
+      "latence_ms": 0.4,
+      "recall@5": 0.554,
+      "hit@1": 0.321,
+      "mrr": 0.401,
+      "ndcg@5": 0.429,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 0.588,
+          "mrr": 0.412
+        },
+        "injection": {
+          "n": 2,
+          "recall": 0.0,
+          "mrr": 0.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.5,
+          "mrr": 0.33
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.6,
+          "mrr": 0.467
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 0.5,
+          "mrr": 0.5
+        }
+      }
+    },
+    {
+      "config": "fixed/hybrid",
+      "chunking": "fixed",
+      "retriever": "hybrid",
+      "nb_chunks": 73,
+      "build_s": 0.1,
+      "latence_ms": 1.4,
+      "recall@5": 0.982,
+      "hit@1": 0.911,
+      "mrr": 0.946,
+      "ndcg@5": 0.944,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.963
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.7
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "fixed/hybrid+dense",
+      "chunking": "fixed",
+      "retriever": "hybrid+dense",
+      "nb_chunks": 73,
+      "build_s": 1.17,
+      "latence_ms": 2.1,
+      "recall@5": 0.955,
+      "hit@1": 0.732,
+      "mrr": 0.834,
+      "ndcg@5": 0.846,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 0.988,
+          "mrr": 0.822
+        },
+        "injection": {
+          "n": 2,
+          "recall": 0.75,
+          "mrr": 0.75
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.9,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.8
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 0.833
+        }
+      }
+    },
+    {
+      "config": "fixed/hybrid+ltr",
+      "chunking": "fixed",
+      "retriever": "hybrid+ltr",
+      "nb_chunks": 73,
+      "build_s": 1.51,
+      "latence_ms": 0.0,
+      "recall@5": 0.982,
+      "hit@1": 0.893,
+      "mrr": 0.93,
+      "ndcg@5": 0.933,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.946
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.65
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "sentences/bm25",
+      "chunking": "sentences",
+      "retriever": "bm25",
+      "nb_chunks": 113,
+      "build_s": 0.09,
+      "latence_ms": 0.2,
+      "recall@5": 0.982,
+      "hit@1": 0.893,
+      "mrr": 0.929,
+      "ndcg@5": 0.939,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.946
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.64
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "sentences/char_tfidf",
+      "chunking": "sentences",
+      "retriever": "char_tfidf",
+      "nb_chunks": 113,
+      "build_s": 0.17,
+      "latence_ms": 1.2,
+      "recall@5": 0.982,
+      "hit@1": 0.875,
+      "mrr": 0.929,
+      "ndcg@5": 0.935,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.938
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.7
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "sentences/dense_spacy",
+      "chunking": "sentences",
+      "retriever": "dense_spacy",
+      "nb_chunks": 113,
+      "build_s": 1.08,
+      "latence_ms": 0.3,
+      "recall@5": 0.384,
+      "hit@1": 0.321,
+      "mrr": 0.354,
+      "ndcg@5": 0.351,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 0.425,
+          "mrr": 0.39
+        },
+        "injection": {
+          "n": 2,
+          "recall": 0.0,
+          "mrr": 0.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.3,
+          "mrr": 0.25
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.2,
+          "mrr": 0.2
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 0.5,
+          "mrr": 0.5
+        }
+      }
+    },
+    {
+      "config": "sentences/hybrid",
+      "chunking": "sentences",
+      "retriever": "hybrid",
+      "nb_chunks": 113,
+      "build_s": 0.09,
+      "latence_ms": 1.4,
+      "recall@5": 0.982,
+      "hit@1": 0.929,
+      "mrr": 0.955,
+      "ndcg@5": 0.957,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.963
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.8
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    },
+    {
+      "config": "sentences/hybrid+dense",
+      "chunking": "sentences",
+      "retriever": "hybrid+dense",
+      "nb_chunks": 113,
+      "build_s": 1.22,
+      "latence_ms": 1.8,
+      "recall@5": 0.875,
+      "hit@1": 0.536,
+      "mrr": 0.672,
+      "ndcg@5": 0.706,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 0.938,
+          "mrr": 0.686
+        },
+        "injection": {
+          "n": 2,
+          "recall": 0.5,
+          "mrr": 0.5
+        },
+        "multi": {
+          "n": 5,
+          "recall": 0.9,
+          "mrr": 0.8
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.64
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 0.5,
+          "mrr": 0.5
+        }
+      }
+    },
+    {
+      "config": "sentences/hybrid+ltr",
+      "chunking": "sentences",
+      "retriever": "hybrid+ltr",
+      "nb_chunks": 113,
+      "build_s": 1.21,
+      "latence_ms": 0.0,
+      "recall@5": 0.982,
+      "hit@1": 0.911,
+      "mrr": 0.941,
+      "ndcg@5": 0.943,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "recall": 1.0,
+          "mrr": 0.963
+        },
+        "injection": {
+          "n": 2,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "recall": 1.0,
+          "mrr": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "recall": 0.8,
+          "mrr": 0.64
+        },
+        "sans_reponse": {
+          "n": 8,
+          "recall": NaN,
+          "mrr": NaN
+        },
+        "typo": {
+          "n": 4,
+          "recall": 1.0,
+          "mrr": 1.0
+        }
+      }
+    }
+  ],
+  "meilleure_config": "sentences/hybrid",
+  "calibration": {
+    "seuil": 0.44,
+    "exactitude_cv": 0.906,
+    "exactitude": 0.922,
+    "abstention_correcte_sans_reponse": 0.625,
+    "fausses_abstentions": 0.036
+  },
+  "reponses": {
+    "extractif": {
+      "generateur": "extractif",
+      "exactitude_globale": 0.875,
+      "par_type": {
+        "factuelle": {
+          "n": 40,
+          "exactitude": 0.95
+        },
+        "injection": {
+          "n": 2,
+          "exactitude": 1.0
+        },
+        "multi": {
+          "n": 5,
+          "exactitude": 1.0
+        },
+        "reformulation": {
+          "n": 5,
+          "exactitude": 0.4
+        },
+        "sans_reponse": {
+          "n": 8,
+          "exactitude": 0.625
+        },
+        "typo": {
+          "n": 4,
+          "exactitude": 1.0
+        }
+      },
+      "fuites_injection": 0,
+      "phrases_ancrees": 1.0,
+      "reponses_avec_nombre_non_ancre": 0
+    }
+  }
+}

@@ -1,0 +1,27 @@
+flowchart LR
+  subgraph ING[Ingestion]
+    C[(corpus/*.md<br/>25 procédures)] --> P[Parsing<br/>frontmatter + sections<br/>tableaux → phrases]
+    P --> CH{Découpage}
+    CH --> S1[sections]
+    CH --> S2[fenêtres fixes]
+    CH --> S3[fenêtres de phrases]
+    P --> INJ[Détection<br/>d'injections]
+  end
+  subgraph IDX[Index]
+    B[BM25<br/>mots racinisés]
+    T[TF-IDF<br/>n-grammes caractères]
+    D1[Dense spaCy<br/>300 d]
+    D2[Dense e5<br/>optionnel]
+  end
+  S1 & S2 & S3 --> B & T & D1 & D2
+  Q([Question]) --> B & T & D1 & D2
+  B & T & D1 & D2 --> RRF[Fusion RRF]
+  RRF --> RR[Reranker<br/>LTR ou cross-encoder]
+  RR --> F[Filtre injections]
+  F --> CONF{Confiance<br/>≥ seuil ?}
+  CONF -- non --> A[« Je ne trouve pas<br/>cette information »]
+  CONF -- oui --> G[Générateur<br/>extractif ou Claude]
+  G --> V[Vérification d'ancrage<br/>phrases + chiffres]
+  V --> R([Réponse citée])
+  EV[Banc d'évaluation<br/>64 questions] -. calibre .-> CONF
+  EV -. entraîne .-> RR

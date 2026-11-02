@@ -1,0 +1,19 @@
+# Noyau (hors-ligne, aucun accès réseau après installation)
+numpy>=1.26
+scikit-learn>=1.4
+rank-bm25>=0.2.2
+snowballstemmer>=2.2
+pyyaml>=6.0
+matplotlib>=3.8
+streamlit>=1.35
+pytest>=8.0
+
+# Vecteurs de mots français (modèle dense léger) — distribué via les releases GitHub de spaCy
+spacy>=3.8,<3.9
+https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.8.0/fr_core_news_md-3.8.0-py3-none-any.whl
+
+# Optionnel : encodeur de phrases multilingue + cross-encoder (config/dense_e5.yaml)
+# sentence-transformers>=3.0
+
+# Optionnel : génération par Claude (variable ANTHROPIC_API_KEY)
+# anthropic>=0.40

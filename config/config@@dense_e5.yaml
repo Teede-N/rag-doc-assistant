@@ -1,0 +1,14 @@
+# Configuration « modèles forts » : encodeur de phrases multilingue + cross-encoder.
+# Nécessite : pip install sentence-transformers, et l'accès à Hugging Face au premier lancement.
+chunking: sentences
+chunking_params: {fenetre: 3, pas: 2}
+retriever: hybrid
+hybrid_composants: [bm25, char_tfidf, dense_st]
+hybrid_poids: [1.0, 0.6, 1.0]
+dense_modele: intfloat/multilingual-e5-small
+k_candidats: 30
+k_contexte: 4
+reranker: cross_encoder
+generateur: auto
+seuil_abstention: 0.44
+exclure_injections: true
